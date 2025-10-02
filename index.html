@@ -2,66 +2,144 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio - Réflexion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Personnel</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#f9f9fb;
-      --bg-alt:#f1f1f5;
-      --card:#ffffff;
-      --accent:#3b82f6;
-      --title:#1e3a8a;
-      --text:#333;
-      --muted:#666
+    :root {
+      --bg: #f9f9fb;
+      --bg-alt: #f1f1f5;
+      --card: #ffffff;
+      --accent: #3b82f6;
+      --title: #1e3a8a;
+      --text: #333;
+      --muted: #666;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:'Inter',sans-serif;
-      line-height:1.6;
-      background:var(--bg);
-      color:var(--text);
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
     }
-    header{
-      position:fixed;
-      top:0;left:0;right:0;
-      background:var(--card);
-      border-bottom:1px solid #e5e7eb;
-      z-index:1000;
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: var(--card);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 1000;
     }
-    nav{display:flex;justify-content:space-between;align-items:center;max-width:1000px;margin:0 auto;padding:.8rem 1rem}
-    nav a{
-      color:var(--title);
-      text-decoration:none;
-      margin:0 .8rem;
-      font-weight:600;
-      transition:color .3s;
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    nav a:hover{color:var(--accent)}
-
-    .container{max-width:900px;margin:0 auto;padding:6rem 1rem 2rem}
-    h1{margin:0 0 1rem;font-size:2rem;color:var(--title)}
-    h2{color:var(--accent);margin-top:1.4rem}
-    h3{margin-top:1rem;color:var(--title);font-size:1.05rem}
-    .card{background:var(--card);padding:1rem 1.4rem;border-radius:12px;box-shadow:0 6px 20px rgba(10,10,10,0.05);margin-top:1.5rem;opacity:0;transform:translateY(30px);transition:all .6s ease-out}
-    .card.show{opacity:1;transform:translateY(0)}
-    section:nth-child(even){background:var(--bg-alt);padding:2rem 1rem;border-radius:16px}
-    ul{padding-left:1.2rem}
-    .muted{color:var(--muted)}
-    footer{padding:1.5rem;text-align:center;color:var(--muted);font-size:.9rem}
-    .back-to-top{
-      position:fixed;bottom:20px;right:20px;
-      background:var(--accent);color:#fff;border:none;border-radius:50%;
-      width:44px;height:44px;cursor:pointer;font-size:20px;
-      display:flex;align-items:center;justify-content:center;
-      box-shadow:0 4px 10px rgba(0,0,0,.2);
-      transition:background .3s;
+    nav a {
+      color: var(--title);
+      text-decoration: none;
+      margin: 0 0.8rem;
+      font-weight: 600;
+      transition: color 0.3s;
     }
-    .back-to-top:hover{background:var(--title)}
+    nav a:hover {
+      color: var(--accent);
+    }
+    .hero {
+      padding: 8rem 1rem 4rem;
+      text-align: center;
+      background: var(--bg-alt);
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--title);
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin-top: 3rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 20px rgba(10,10,10,0.05);
+      margin-top: 1.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    h3 {
+      margin-top: 1rem;
+      color: var(--title);
+      font-size: 1.05rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .muted {
+      color: var(--muted);
+    }
+    footer {
+      padding: 2rem 1rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    .back-to-top:hover {
+      background: var(--title);
+    }
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      .hero p {
+        font-size: 1.3rem;
+      }
+    }
   </style>
 </head>
 <body>
+
   <header>
     <nav>
       <div><strong>Mon Portfolio</strong></div>
@@ -76,12 +154,15 @@
     </nav>
   </header>
 
-  <main class="container">
+  <section class="hero">
     <h1>Réfléchir pour construire un bon portfolio perso</h1>
-    <p class="muted">Fiche de réflexion — contenu complet intégré</p>
+    <p class="muted">Bienvenu(e) — découvre mon parcours, mes valeurs et mes ambitions.</p>
+  </section>
+
+  <main class="container">
 
     <section class="card" id="qui-suis-je">
-      <h2>1. Qui suis-je ? (Identité &amp; personnalité)</h2>
+      <h2>1. Qui suis-je ? (Identité & personnalité)</h2>
 
       <h3>• Comment te présenterais-tu en quelques phrases à quelqu’un qui ne te connaît pas ?</h3>
       <p>Je suis quelqu’un de curieux qui aime apprendre de nouvelles choses. Également j’adore faire du sport et voyager.</p>
@@ -97,7 +178,7 @@
     </section>
 
     <section class="card" id="parcours">
-      <h2>2. Parcours (académique &amp; extrascolaire)</h2>
+      <h2>2. Parcours (académique & extrascolaire)</h2>
 
       <h3>• Diplômes ou formations as-tu suivis jusqu’ici ?</h3>
       <p>Baccalauréat et licence commercialisation des produits et services sportifs à l’Ileps</p>
@@ -106,7 +187,7 @@
       <p>Les cours d’histoire et d’économie</p>
 
       <h3>• As-tu participé à des projets associatifs, sportifs, culturels, ou bénévoles qui t’ont appris quelque chose ?</h3>
-      <p>Oui pendant les JO 2024 de PARIS, j’étais bénévole CDFAS (Athletica) à Ermont où les États‑Unis s’entraînaient. J’ai construit la piste de volley ainsi que celle d’escrime. J’ai également rempli leurs sacs de goodies équipement et fais du ravitaillement.</p>
+      <p>Oui pendant les JO 2024 de PARIS, j’étais bénévole CDFAS (Athletica) à Ermont où les États-Unis s’entraînaient. J’ai construit la piste de volley ainsi que celle d’escrime. J’ai également rempli leurs sacs de goodies équipement et fais du ravitaillement.</p>
 
       <h3>• Expériences professionnelles (stages, jobs étudiants, missions ponctuelles) ? Qu’est ce que ça t’a apporté ?</h3>
       <p>J’ai travaillé 1 mois dans la restauration en Écosse après la terminale pour améliorer mon anglais. En première année d’étude j’ai travaillé 2 mois chez Decathlon. En deuxième année j’ai signé un contrat d’alternance chez Spotlag, une agence événementielle.</p>
@@ -118,7 +199,7 @@
       <h3>• Quelles compétences pratiques as-tu développées dans tes études ?</h3>
       <p>Gestion de projet, vente, communication, négociation, développement, partenariat.</p>
 
-      <h3>• Quelles compétences personnelles (soft skills) ?</h3>
+      <h3>• Quelles compétences personnelles (soft skills) te semblent être tes points forts ?</h3>
       <p>Je suis très organisé : en alternance je suis chef de projet et je dois en gérer jusqu’à 20 par semaine. Je suis également persévérant car il faut se battre pour signer avec le client ; la concurrence est forte.</p>
 
       <h3>• Y a-t-il des outils ou logiciels que tu maîtrises ?</h3>
@@ -132,12 +213,12 @@
       <h2>4. Réussites et fiertés</h2>
 
       <h3>• Quelle réalisation (scolaire, pro, associative, personnelle) te rend fier/fière ?</h3>
-      <p>Le semi‑marathon de Paris que j’ai réalisé et le marathon de Paris que je prépare actuellement.</p>
+      <p>Le semi-marathon de Paris que j’ai réalisé et le marathon de Paris que je prépare actuellement.</p>
 
-      <h3>• Quel défi as-tu relevé et qui t’a permis d’apprendre sur toi‑même ?</h3>
-      <p>Le semi‑marathon. Le fait de changer d’établissement scolaire au collège et de repartir à zéro m’a aussi beaucoup appris.</p>
+      <h3>• Quel défi as-tu relevé et qui t’a permis d’apprendre sur toi-même ?</h3>
+      <p>Le semi-marathon. Le fait de changer d’établissement scolaire au collège et de repartir à zéro m’a aussi beaucoup appris.</p>
 
-      <h3>• Y a‑t‑il un travail ou projet que tu aimerais montrer dans ton portfolio ?</h3>
+      <h3>• Y a-t-il un travail ou projet que tu aimerais montrer dans ton portfolio ?</h3>
       <p>Pour l’instant : organiser la Nuit du Volley et mes missions chez Spotlag (événementiel). À compléter avec des photos et documents si disponibles.</p>
 
       <h3>• Pour faire le lien avec la partie suivante, quel est ton prochain challenge ?</h3>
@@ -160,44 +241,33 @@
       <p>Un travail flexible qui permet de voyager et d’être bien rémunéré — conciliant autonomie et impact.</p>
     </section>
 
-    <section class="card" id="images">
-      <h2>6. Personnalité professionnelle en images</h2>
-      <p>Ce sera utile pour construire une charte graphique cohérente.</p>
-
-      <h3>• Si tu devais choisir une citation ou une phrase qui t’inspire, laquelle serait‑ce ?</h3>
-      <p><em>Never give up, make it possible</em></p>
-
-      <h3>• Quelle image ou symbole pourrait représenter ton parcours ou ton état d’esprit ?</h3>
-      <p>Un symbole possible : une montagne (défi, progression) ou une boussole (orientation, voyage). À choisir selon l’identité visuelle.</p>
-
-      <h3>• Quels centres d’intérêt ou passions aimerais‑tu partager pour montrer qui tu es ?</h3>
-      <p>Sport, musique, voyage</p>
-    </section>
-
     <section class="card" id="conclure">
       <h2>7. Conclure</h2>
 
-      <h3>• Qu’aimerais‑tu que les recruteurs retiennent absolument de toi après avoir vu ton site ?</h3>
+      <h3>• Qu’aimerais-tu que les recruteurs retiennent absolument de toi après avoir vu ton site ?</h3>
       <p>Que je suis un profil atypique, adaptable et motivé.</p>
 
-      <h3>• Si un recruteur devait te contacter demain, sur quoi aimerais‑tu qu’il échange avec toi en premier ?</h3>
+      <h3>• Si un recruteur devait te contacter demain, sur quoi aimerais-tu qu’il échange avec toi en premier ?</h3>
       <p>J’aimerais qu’il échange d’abord sur mes expériences en gestion de projet et mon alternance, ainsi que sur mes aspirations et compétences en IA.</p>
     </section>
 
-    <footer class="muted">&copy; 2025 — Portfolio personnel</footer>
+    <footer>&copy; 2025 — Portfolio personnel</footer>
   </main>
 
-  <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
 
   <script>
     // Animation apparition au scroll
-    const cards=document.querySelectorAll('.card');
-    const observer=new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){entry.target.classList.add('show');}
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
       });
-    },{threshold:0.1});
-    cards.forEach(c=>observer.observe(c));
+    }, { threshold: 0.1 });
+    cards.forEach(c => observer.observe(c));
   </script>
+
 </body>
 </html>
