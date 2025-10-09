@@ -6,137 +6,8 @@
   <title>Portfolio Personnel</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f9f9fb;
-      --bg-alt: #f1f1f5;
-      --card: #ffffff;
-      --accent: #3b82f6;
-      --title: #1e3a8a;
-      --text: #333;
-      --muted: #666;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
-    }
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: var(--card);
-      border-bottom: 1px solid #e5e7eb;
-      z-index: 1000;
-    }
-    nav {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: var(--title);
-      text-decoration: none;
-      margin: 0 0.8rem;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: var(--accent);
-    }
-    .hero {
-      padding: 8rem 1rem 4rem;
-      text-align: center;
-      background: var(--bg-alt);
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      color: var(--title);
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--muted);
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-    section {
-      margin-top: 3rem;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 6px 20px rgba(10,10,10,0.05);
-      margin-top: 1.5rem;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease-out;
-    }
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    h2 {
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-    h3 {
-      margin-top: 1rem;
-      color: var(--title);
-      font-size: 1.05rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    .muted {
-      color: var(--muted);
-    }
-    footer {
-      padding: 2rem 1rem;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-top: 4rem;
-    }
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      cursor: pointer;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: background 0.3s;
-    }
-    .back-to-top:hover {
-      background: var(--title);
-    }
-    @media (min-width: 768px) {
-      .hero h1 {
-        font-size: 3rem;
-      }
-      .hero p {
-        font-size: 1.3rem;
-      }
-    }
-  </style>
+  <!-- Fichier CSS externe -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -163,101 +34,57 @@
 
     <section class="card" id="qui-suis-je">
       <h2>1. Qui suis-je ? (Identité & personnalité)</h2>
-
       <h3>• Comment te présenterais-tu en quelques phrases à quelqu’un qui ne te connaît pas ?</h3>
       <p>Je suis quelqu’un de curieux qui aime apprendre de nouvelles choses. Également j’adore faire du sport et voyager.</p>
 
       <h3>• Trois mots (ou qualités) pour ta personnalité dans un contexte professionnel ?</h3>
       <p>Je suis proactif, dynamique et sociable</p>
 
-      <h3>• Tes valeurs principales (ex. : curiosité, rigueur, créativité, esprit d’équipe…) ?</h3>
+      <h3>• Tes valeurs principales ?</h3>
       <p>Je suis curieux avec un bon esprit d’équipe. Je suis aussi rigoureux avec de la patience.</p>
 
-      <h3>• Une anecdote (personnelle, scolaire, associative, sportive, etc.) qui illustre bien qui tu es ?</h3>
-      <p>En terminal j’ai organisé avec plusieurs potes un événement sportif qui s’appelle la nuit du volley. Le but était de faire un tournoi géant de volley de 19H à 23H avec des poules puis des matchs éliminatoires.</p>
+      <h3>• Une anecdote ?</h3>
+      <p>En terminal j’ai organisé avec plusieurs potes un événement sportif qui s’appelle la nuit du volley.</p>
     </section>
 
     <section class="card" id="parcours">
       <h2>2. Parcours (académique & extrascolaire)</h2>
-
-      <h3>• Diplômes ou formations as-tu suivis jusqu’ici ?</h3>
-      <p>Baccalauréat et licence commercialisation des produits et services sportifs à l’Ileps</p>
-
-      <h3>• Une matière ou un projet scolaire qui t’a particulièrement marqué ? Pourquoi ?</h3>
-      <p>Les cours d’histoire et d’économie</p>
-
-      <h3>• As-tu participé à des projets associatifs, sportifs, culturels, ou bénévoles qui t’ont appris quelque chose ?</h3>
-      <p>Oui pendant les JO 2024 de PARIS, j’étais bénévole CDFAS (Athletica) à Ermont où les États-Unis s’entraînaient. J’ai construit la piste de volley ainsi que celle d’escrime. J’ai également rempli leurs sacs de goodies équipement et fais du ravitaillement.</p>
-
-      <h3>• Expériences professionnelles (stages, jobs étudiants, missions ponctuelles) ? Qu’est ce que ça t’a apporté ?</h3>
-      <p>J’ai travaillé 1 mois dans la restauration en Écosse après la terminale pour améliorer mon anglais. En première année d’étude j’ai travaillé 2 mois chez Decathlon. En deuxième année j’ai signé un contrat d’alternance chez Spotlag, une agence événementielle.</p>
+      <p>Baccalauréat et licence commercialisation des produits et services sportifs à l’Ileps.</p>
+      <p>Bénévole aux JO 2024, travail en Écosse, Decathlon, Spotlag (alternance).</p>
     </section>
 
     <section class="card" id="competences">
       <h2>3. Compétences</h2>
-
-      <h3>• Quelles compétences pratiques as-tu développées dans tes études ?</h3>
-      <p>Gestion de projet, vente, communication, négociation, développement, partenariat.</p>
-
-      <h3>• Quelles compétences personnelles (soft skills) te semblent être tes points forts ?</h3>
-      <p>Je suis très organisé : en alternance je suis chef de projet et je dois en gérer jusqu’à 20 par semaine. Je suis également persévérant car il faut se battre pour signer avec le client ; la concurrence est forte.</p>
-
-      <h3>• Y a-t-il des outils ou logiciels que tu maîtrises ?</h3>
-      <p>Je maîtrise Salesforce, Excel, Word, Canva et les réseaux sociaux.</p>
-
-      <h3>• Parmi ces compétences, lesquelles aimerais-tu mettre en avant pour un futur recruteur ?</h3>
-      <p>Mon expérience dans le monde du travail, en particulier la gestion de projets et les relations clients.</p>
+      <p>Gestion de projet, communication, négociation, partenariat, vente.</p>
+      <p>Soft skills : organisation, persévérance, esprit d’équipe.</p>
+      <p>Outils : Salesforce, Excel, Word, Canva, réseaux sociaux.</p>
     </section>
 
     <section class="card" id="reussites">
       <h2>4. Réussites et fiertés</h2>
-
-      <h3>• Quelle réalisation (scolaire, pro, associative, personnelle) te rend fier/fière ?</h3>
-      <p>Le semi-marathon de Paris que j’ai réalisé et le marathon de Paris que je prépare actuellement.</p>
-
-      <h3>• Quel défi as-tu relevé et qui t’a permis d’apprendre sur toi-même ?</h3>
-      <p>Le semi-marathon. Le fait de changer d’établissement scolaire au collège et de repartir à zéro m’a aussi beaucoup appris.</p>
-
-      <h3>• Y a-t-il un travail ou projet que tu aimerais montrer dans ton portfolio ?</h3>
-      <p>Pour l’instant : organiser la Nuit du Volley et mes missions chez Spotlag (événementiel). À compléter avec des photos et documents si disponibles.</p>
-
-      <h3>• Pour faire le lien avec la partie suivante, quel est ton prochain challenge ?</h3>
-      <p>Le marathon de Paris en avril.</p>
+      <p>Semi-marathon de Paris et préparation du marathon. Organisation de la Nuit du Volley.</p>
     </section>
 
     <section class="card" id="aspirations">
       <h2>5. Aspirations</h2>
-
-      <h3>• Dans quel type de poste aimerais-tu évoluer après ta formation ?</h3>
-      <p>Un poste dans l’IA.</p>
-
-      <h3>• Quel secteur ou univers professionnel t’attire particulièrement ? Pourquoi ?</h3>
-      <p>L’intelligence artificielle : domaine en croissance, plein d’opportunités et très lié à l’innovation.</p>
-
-      <h3>• Quelles compétences aimerais-tu encore développer dans les prochaines années ?</h3>
-      <p>Compétences techniques en IA (machine learning, data) et gestion de produits technologiques.</p>
-
-      <h3>• Ton “job de rêve” (même de façon imagée) ?</h3>
-      <p>Un travail flexible qui permet de voyager et d’être bien rémunéré — conciliant autonomie et impact.</p>
+      <p>Un poste dans l’IA, domaine innovant et dynamique.</p>
+      <p>Souhait de développer mes compétences en machine learning et data.</p>
     </section>
 
     <section class="card" id="conclure">
       <h2>7. Conclure</h2>
-
-      <h3>• Qu’aimerais-tu que les recruteurs retiennent absolument de toi après avoir vu ton site ?</h3>
-      <p>Que je suis un profil atypique, adaptable et motivé.</p>
-
-      <h3>• Si un recruteur devait te contacter demain, sur quoi aimerais-tu qu’il échange avec toi en premier ?</h3>
-      <p>J’aimerais qu’il échange d’abord sur mes expériences en gestion de projet et mon alternance, ainsi que sur mes aspirations et compétences en IA.</p>
+      <p>Je suis un profil atypique, adaptable et motivé. Contactez-moi pour échanger sur mes projets et aspirations.</p>
     </section>
 
-    <footer>&copy; 2025 — Portfolio personnel</footer>
   </main>
+
+  <footer>
+    &copy; 2025 — Portfolio personnel
+  </footer>
 
   <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
 
   <script>
-    // Animation apparition au scroll
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
