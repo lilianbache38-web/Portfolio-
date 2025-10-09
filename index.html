@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio Personnel</title>
-  <!-- Google Fonts -->
+  <title>Portfolio — Lilian Bache</title>
+  <meta name="description" content="Portfolio de Lilian Bache — parcours, compétences et aspirations en événementiel et IA." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- Fichier CSS externe -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <div><strong>Mon Portfolio</strong></div>
-      <div>
+  <header class="site-header" role="banner">
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">LB</div>
+        <strong>Lilian Bache</strong>
+      </div>
+      <div class="nav-links">
         <a href="#qui-suis-je">Qui suis-je</a>
         <a href="#parcours">Parcours</a>
         <a href="#competences">Compétences</a>
@@ -25,76 +27,163 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Réfléchir pour construire un bon portfolio perso</h1>
-    <p class="muted">Bienvenu(e) — découvre mon parcours, mes valeurs et mes ambitions.</p>
-  </section>
-
-  <main class="container">
-
-    <section class="card" id="qui-suis-je">
-      <h2>1. Qui suis-je ? (Identité & personnalité)</h2>
-      <h3>• Comment te présenterais-tu en quelques phrases à quelqu’un qui ne te connaît pas ?</h3>
-      <p>Je suis quelqu’un de curieux qui aime apprendre de nouvelles choses. Également j’adore faire du sport et voyager.</p>
-
-      <h3>• Trois mots (ou qualités) pour ta personnalité dans un contexte professionnel ?</h3>
-      <p>Je suis proactif, dynamique et sociable</p>
-
-      <h3>• Tes valeurs principales ?</h3>
-      <p>Je suis curieux avec un bon esprit d’équipe. Je suis aussi rigoureux avec de la patience.</p>
-
-      <h3>• Une anecdote ?</h3>
-      <p>En terminal j’ai organisé avec plusieurs potes un événement sportif qui s’appelle la nuit du volley.</p>
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Réfléchir pour construire un bon portfolio perso</h1>
+        <p class="lead">Découvre mon parcours, mes compétences et mes projets — un profil orienté événements &amp; IA.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#qui-suis-je">En savoir plus</a>
+          <a class="btn outline" href="#conclure">Contact / CV</a>
+        </div>
+      </div>
     </section>
 
-    <section class="card" id="parcours">
-      <h2>2. Parcours (académique & extrascolaire)</h2>
-      <p>Baccalauréat et licence commercialisation des produits et services sportifs à l’Ileps.</p>
-      <p>Bénévole aux JO 2024, travail en Écosse, Decathlon, Spotlag (alternance).</p>
+    <section class="container content">
+      <!-- 1. Qui suis-je -->
+      <article class="card" id="qui-suis-je" tabindex="-1" aria-labelledby="qs-title">
+        <h2 id="qs-title">1. Qui suis-je ? (Identité &amp; personnalité)</h2>
+
+        <h3>• Comment te présenterais-tu en quelques phrases à quelqu’un qui ne te connaît pas ?</h3>
+        <p>Je suis quelqu’un de curieux et ouvert d’esprit, toujours en quête de nouvelles connaissances. J’aime apprendre, découvrir et relever de nouveaux défis. Ces expériences m’ont permis de développer une solide capacité d’organisation, une bonne gestion logistique et un véritable esprit d’équipe dans des environnements dynamiques et parfois concurrentiels. Je fais preuve de persévérance et d’adaptabilité, deux qualités essentielles pour mener à bien chaque projet.</p>
+
+        <h3>• Trois mots (ou qualités) pour ta personnalité dans un contexte professionnel ?</h3>
+        <p><strong>Proactif, dynamique, sociable.</strong></p>
+
+        <h3>• Tes valeurs principales ?</h3>
+        <p>Curiosité, rigueur et esprit d’équipe. J’accorde aussi de l’importance à la patience et à la bienveillance dans la collaboration.</p>
+
+        <h3>• Anecdote</h3>
+        <p>En terminale, j’ai co-organisé *La Nuit du Volley*, un tournoi de 19h à 23h avec poules et phases éliminatoires. J’y ai appris la coordination d’équipe, la gestion des imprévus et la satisfaction de mener un projet collectif à son terme.</p>
+      </article>
+
+      <!-- 2. Parcours -->
+      <article class="card" id="parcours" tabindex="-1" aria-labelledby="parcours-title">
+        <h2 id="parcours-title">2. Parcours (académique &amp; extrascolaire)</h2>
+
+        <h3>• Diplômes</h3>
+        <p>Baccalauréat, puis licence en <em>Commercialisation des Produits et Services Sportifs</em> à l’ILEPS.</p>
+
+        <h3>• Matière / Projet marquant</h3>
+        <p>Les cours d’histoire et d’économie : ils m’ont aidé à comprendre les enjeux sociaux et économiques qui structurent les organisations.</p>
+
+        <h3>• Projets associatifs &amp; bénévolat</h3>
+        <p>Aux JO 2024 de Paris, j’étais bénévole au CDFAS (Athletica) à Ermont. J’ai participé à la construction des installations, à la préparation des équipements et au ravitaillement — une expérience logistique et humaine forte, dans un contexte international.</p>
+
+        <h3>• Expériences professionnelles</h3>
+        <p>1 mois en restauration en Écosse (amélioration de l’anglais), 2 mois chez Décathlon (service client), puis alternance chez Spotlag (événementiel) : gestion de projet, relation client et coordination d’équipes.</p>
+      </article>
+
+      <!-- 3. Compétences -->
+      <article class="card" id="competences" tabindex="-1" aria-labelledby="comp-title">
+        <h2 id="comp-title">3. Compétences</h2>
+
+        <h3>• Compétences techniques</h3>
+        <p>Gestion de projet, prospection, communication, négociation, développement de partenariats.</p>
+
+        <h3>• Soft skills</h3>
+        <p>Organisation (gestion de jusqu’à 20 projets/semaine en alternance), persévérance et adaptabilité. Je sais prioriser et rester efficace sous pression.</p>
+
+        <h3>• Outils</h3>
+        <p>Salesforce, Excel, Word, Canva et les principaux réseaux sociaux.</p>
+
+        <h3>• À mettre en avant</h3>
+        <p>Mon expérience en gestion de projet et ma capacité à entretenir des relations clients solides dans un environnement exigeant.</p>
+      </article>
+
+      <!-- 4. Réussites -->
+      <article class="card" id="reussites" tabindex="-1" aria-labelledby="reuss-title">
+        <h2 id="reuss-title">4. Réussites et fiertés</h2>
+
+        <h3>• Réalisations</h3>
+        <p>Terminer le semi-marathon de Paris ; actuellement en préparation pour le marathon de Paris. Ces défis illustrent mon engagement et ma discipline.</p>
+
+        <h3>• Défis personnels</h3>
+        <p>Changer d’établissement au collège et repartir à zéro : une leçon d’adaptabilité et de résilience.</p>
+
+        <h3>• Projets à montrer</h3>
+        <p>La Nuit du Volley et plusieurs missions réalisées chez Spotlag. Je prévois d’ajouter bientôt photos et documents pour illustrer ces projets.</p>
+
+        <h3>• Prochain challenge</h3>
+        <p>Le marathon de Paris (avril).</p>
+      </article>
+
+      <!-- 5. Aspirations -->
+      <article class="card" id="aspirations" tabindex="-1" aria-labelledby="aspir-title">
+        <h2 id="aspir-title">5. Aspirations</h2>
+
+        <h3>• Poste visé</h3>
+        <p>Un poste lié à l’intelligence artificielle, idéalement au croisement produit &amp; donnée.</p>
+
+        <h3>• Univers professionnel</h3>
+        <p>L’IA : un secteur en pleine expansion, riche en opportunités d’innovation et d’impact.</p>
+
+        <h3>• Compétences à développer</h3>
+        <p>Machine learning, data science et gestion de produits technologiques.</p>
+
+        <h3>• Job de rêve</h3>
+        <p>Un rôle flexible qui permet de voyager, d’avoir un impact réel et d’évoluer dans un environnement stimulant.</p>
+      </article>
+
+      <!-- 7. Conclure -->
+      <article class="card" id="conclure" tabindex="-1" aria-labelledby="concl-title">
+        <h2 id="concl-title">7. Conclusion</h2>
+
+        <h3>• Ce que je veux que l’on retienne</h3>
+        <p>Que je suis un profil atypique, adaptable et motivé, capable d’apporter de la valeur ajoutée à une équipe.</p>
+
+        <h3>• Premier sujet d’échange souhaité</h3>
+        <p>Je souhaite d’abord échanger sur mes expériences en gestion de projet et mon alternance, ainsi que sur mes aspirations en IA.</p>
+
+        <div class="card-actions">
+          <a class="btn primary" href="#" download="CV-Lilian-Bache.pdf">Télécharger mon CV (PDF)</a>
+          <a class="btn outline" href="mailto:ton.email@example.com">Me contacter</a>
+        </div>
+      </article>
+
     </section>
 
-    <section class="card" id="competences">
-      <h2>3. Compétences</h2>
-      <p>Gestion de projet, communication, négociation, partenariat, vente.</p>
-      <p>Soft skills : organisation, persévérance, esprit d’équipe.</p>
-      <p>Outils : Salesforce, Excel, Word, Canva, réseaux sociaux.</p>
-    </section>
+    <footer class="site-footer">
+      <div class="container">
+        <small>&copy; 2025 — Lilian Bache — Tous droits réservés</small>
+      </div>
+    </footer>
 
-    <section class="card" id="reussites">
-      <h2>4. Réussites et fiertés</h2>
-      <p>Semi-marathon de Paris et préparation du marathon. Organisation de la Nuit du Volley.</p>
-    </section>
-
-    <section class="card" id="aspirations">
-      <h2>5. Aspirations</h2>
-      <p>Un poste dans l’IA, domaine innovant et dynamique.</p>
-      <p>Souhait de développer mes compétences en machine learning et data.</p>
-    </section>
-
-    <section class="card" id="conclure">
-      <h2>7. Conclure</h2>
-      <p>Je suis un profil atypique, adaptable et motivé. Contactez-moi pour échanger sur mes projets et aspirations.</p>
-    </section>
+    <button class="back-to-top" aria-label="Retour en haut" title="Retour en haut">↑</button>
 
   </main>
 
-  <footer>
-    &copy; 2025 — Portfolio personnel
-  </footer>
-
-  <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
-
   <script>
+    // apparition progressive + highlight nav
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+    cards.forEach(c => observer.observe(c));
+
+    // nav active link
+    const sections = document.querySelectorAll('article.card');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('show');
+          const id = entry.target.id;
+          navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
         }
       });
-    }, { threshold: 0.1 });
-    cards.forEach(c => observer.observe(c));
-  </script>
+    }, { threshold: 0.35 });
+    sections.forEach(s => navObserver.observe(s));
 
+    // back to top
+    const backBtn = document.querySelector('.back-to-top');
+    backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    window.addEventListener('scroll', () => {
+      backBtn.style.display = (window.scrollY > 300) ? 'flex' : 'none';
+    });
+    // init state
+    backBtn.style.display = 'none';
+  </script>
 </body>
 </html>
