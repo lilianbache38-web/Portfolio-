@@ -22,6 +22,7 @@
         <a href="#projets">Projets</a>
         <a href="#parcours">Parcours</a>
         <a href="#contact">Contact</a>
+        <button id="darkModeToggle" class="dark-mode-btn" aria-label="Basculer mode sombre">🌙</button>
       </div>
     </nav>
   </header>
@@ -278,6 +279,183 @@
         </div>
       </article>
 
+      <!-- Témoignages -->
+      <article class="card fade-in" id="testimonials" tabindex="-1">
+        <h2>💬 Témoignages</h2>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">VM</div>
+              <div class="testimonial-info">
+                <h4>Vincent Marinier</h4>
+                <p class="testimonial-role">Directeur - Spotlag</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p>"Lilian a su démontrer une capacité d'adaptation impressionnante dès son arrivée chez Spotlag. Sa gestion simultanée de multiples projets, couplée à son excellent relationnel client, en fait un élément précieux de notre équipe. Son dynamisme et sa proactivité sont des atouts majeurs dans le secteur événementiel."</p>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">IL</div>
+              <div class="testimonial-info">
+                <h4>Équipe pédagogique</h4>
+                <p class="testimonial-role">ILEPS - Cergy</p>
+              </div>
+            </div>
+            <div class="testimonial-content">
+              <p>"Lilian s'est distingué par son engagement tant dans ses études que dans les projets collectifs. Sa curiosité intellectuelle et sa capacité à mobiliser les autres autour d'objectifs communs reflètent les valeurs que nous portons à l'ILEPS. Nous sommes convaincus qu'il saura exceller dans ses projets futurs."</p>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Galerie Photos -->
+      <article class="card fade-in" id="galerie" tabindex="-1">
+        <h2>📸 Galerie</h2>
+        
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="./assets/jo2024.jpg" alt="JO Paris 2024 - Bénévolat" onerror="this.src='https://via.placeholder.com/400x300/6366f1/ffffff?text=JO+2024'">
+            <div class="gallery-overlay">
+              <h4>JO Paris 2024</h4>
+              <p>Bénévolat CDFAS Athletica</p>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="./assets/marathon.jpg" alt="Semi-Marathon de Paris" onerror="this.src='https://via.placeholder.com/400x300/8b5cf6/ffffff?text=Semi-Marathon'">
+            <div class="gallery-overlay">
+              <h4>Semi-Marathon</h4>
+              <p>21km à Paris - Objectif atteint !</p>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="./assets/volley.jpg" alt="La Nuit du Volley" onerror="this.src='https://via.placeholder.com/400x300/667eea/ffffff?text=Nuit+du+Volley'">
+            <div class="gallery-overlay">
+              <h4>Nuit du Volley</h4>
+              <p>Organisation tournoi lycée</p>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="./assets/spotlag.jpg" alt="Spotlag - Équipe" onerror="this.src='https://via.placeholder.com/400x300/764ba2/ffffff?text=Spotlag'">
+            <div class="gallery-overlay">
+              <h4>Spotlag</h4>
+              <p>Alternance événementiel sportif</p>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="./assets/ecosse.jpg" alt="Expérience Écosse" onerror="this.src='https://via.placeholder.com/400x300/6366f1/ffffff?text=Ecosse'">
+            <div class="gallery-overlay">
+              <h4>Écosse</h4>
+              <p>Immersion professionnelle</p>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="./assets/ileps.jpg" alt="ILEPS" onerror="this.src='https://via.placeholder.com/400x300/8b5cf6/ffffff?text=ILEPS'">
+            <div class="gallery-overlay">
+              <h4>ILEPS</h4>
+              <p>Licence CPSS</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- FAQ -->
+      <article class="card fade-in" id="faq" tabindex="-1">
+        <h2>❓ Questions fréquentes</h2>
+        
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h4>Pourquoi as-tu choisi l'événementiel sportif ?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Honnêtement, c'est un mélange de passion et d'opportunité. J'ai toujours adoré le sport, et quand j'ai découvert qu'on pouvait en faire un métier en organisant des événements, ça m'a vraiment parlé. Ce que j'aime, c'est cette énergie unique des événements sportifs, cette adrénaline de tout coordonner en temps réel. Chaque projet est différent, il y a toujours de l'imprévu, et c'est justement ça qui me motive !</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h4>Qu'est-ce qui t'attire dans l'intelligence artificielle ?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Je trouve fascinant qu'on soit à un tournant de l'histoire où l'IA change littéralement tous les secteurs. Mon expérience en gestion de projet m'a fait réaliser que la tech peut démultiplier l'impact qu'on peut avoir. L'IA, c'est pas juste du code, c'est résoudre de vrais problèmes humains à grande échelle. Je veux être au cœur de cette transformation, contribuer à créer des solutions qui ont du sens. Et puis soyons honnêtes, c'est un domaine en pleine explosion avec des opportunités incroyables !</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h4>Quel est ton plus grand défi professionnel relevé ?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Sans hésiter, c'est ma première semaine chez Spotlag en alternance. On m'a confié 12 projets simultanés dès le départ. J'ai eu un moment de panique (je l'avoue !), mais j'ai rapidement compris qu'il fallait tout structurer, prioriser et surtout ne pas hésiter à demander de l'aide. J'ai créé mon propre système de gestion, et aujourd'hui je gère facilement 20 projets par semaine. C'est un peu comme le running finalement : au début ça semble impossible, puis tu trouves ton rythme et tu dépasses tes propres limites.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h4>Disponibilité pour un stage/alternance ?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Je suis actuellement en alternance chez Spotlag, mais je suis activement à la recherche d'opportunités pour la suite, idéalement dans le domaine de l'IA. Je suis flexible sur les dates de démarrage et ouvert à différents formats (stage longue durée, alternance, CDI junior). Si vous avez un projet stimulant dans l'IA, la data ou le produit tech, discutons-en !</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h4>Pourquoi devrais-je te choisir plutôt qu'un autre candidat ?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Parce que je suis un profil atypique qui combine terrain et réflexion stratégique. J'ai cette double compétence : la rigueur organisationnelle de l'événementiel (où l'erreur se voit immédiatement) et la curiosité tech pour l'IA. Je ne suis pas juste quelqu'un qui applique, je suis quelqu'un qui comprend le "pourquoi", qui propose des solutions et qui n'a pas peur de sortir de sa zone de confort. Et puis, j'apporte une vraie énergie positive aux équipes - mes collègues vous le confirmeront !</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h4>Qu'est-ce qui te motive au quotidien ?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Les défis et l'apprentissage constant. J'adore cette sensation de progresser, de découvrir de nouvelles compétences. Que ce soit gérer un projet complexe, apprendre une nouvelle techno ou simplement battre mon record au running, j'ai besoin de sentir que j'avance. Et puis voir l'impact concret de mon travail - un événement réussi, un client satisfait, une équipe qui cartonne - ça, ça me donne la pêche pour la suite !</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h4>Un projet dont tu es particulièrement fier ?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>La Nuit du Volley reste un souvenir marquant parce que c'était mon premier vrai projet d'envergure. Mais aujourd'hui, c'est clairement mon expérience aux JO 2024. Contribuer à un événement mondial, voir l'envers du décor, travailler avec des équipes internationales... c'était juste incroyable. Ça m'a confirmé que je voulais faire des choses qui ont de l'impact, qui rassemblent les gens. Et accessoirement, ça fait une anecdote sympa en soirée ! 😄</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <h4>Tes points forts et points à améliorer ?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p><strong>Points forts :</strong> Organisation au top, capacité à gérer le stress et les imprévus, et un vrai esprit d'équipe. Je suis aussi quelqu'un de proactif - je n'attends pas qu'on me dise quoi faire.<br><br><strong>À améliorer :</strong> Parfois je veux trop en faire et je dois apprendre à mieux déléguer. Et niveau tech pure (code, data), j'ai encore beaucoup à apprendre - mais c'est justement pour ça que je veux évoluer dans l'IA, pour combler ce gap et devenir plus polyvalent !</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
       <!-- Contact -->
       <article class="card fade-in" id="contact" tabindex="-1">
         <h2>Contact</h2>
@@ -472,6 +650,45 @@
       e.preventDefault();
       alert('Merci pour votre message ! (Cette fonction nécessite un backend pour fonctionner réellement)');
       this.reset();
+    });
+
+    // FAQ Toggle
+    function toggleFaq(element) {
+      const faqItem = element.parentElement;
+      const answer = faqItem.querySelector('.faq-answer');
+      const icon = element.querySelector('.faq-icon');
+      
+      faqItem.classList.toggle('active');
+      
+      if (faqItem.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        icon.textContent = '−';
+      } else {
+        answer.style.maxHeight = '0';
+        icon.textContent = '+';
+      }
+    }
+
+    // Mode sombre
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+    
+    // Vérifier si mode sombre déjà activé
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+      darkModeToggle.textContent = '☀️';
+    }
+    
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      
+      if (body.classList.contains('dark-mode')) {
+        darkModeToggle.textContent = '☀️';
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        darkModeToggle.textContent = '🌙';
+        localStorage.setItem('darkMode', 'disabled');
+      }
     });
   </script>
 </body>
