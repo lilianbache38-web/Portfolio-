@@ -325,6 +325,61 @@ body{
   border-color: rgba(99, 102, 241, 0.15);
 }
 
+/* Emoji banner animé */
+.emoji-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.emoji-banner h2 {
+  margin: 0;
+  padding: 0 1.5rem;
+}
+
+.emoji-banner h2::after {
+  display: none;
+}
+
+.emoji-item {
+  font-size: 2rem;
+  display: inline-block;
+  animation: bounce-emoji 2s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.emoji-item:nth-child(1) { animation-delay: 0s; }
+.emoji-item:nth-child(2) { animation-delay: 0.2s; }
+.emoji-item:nth-child(3) { animation-delay: 0.4s; }
+.emoji-item:nth-child(4) { animation-delay: 0.6s; }
+.emoji-item:nth-child(6) { animation-delay: 0.8s; }
+.emoji-item:nth-child(7) { animation-delay: 1s; }
+.emoji-item:nth-child(8) { animation-delay: 1.2s; }
+.emoji-item:nth-child(9) { animation-delay: 1.4s; }
+
+@keyframes bounce-emoji {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+}
+
+.emoji-item:hover {
+  transform: scale(1.5) rotate(360deg);
+  cursor: pointer;
+}
+
 .card h2{
   color: var(--title);
   margin-bottom: 1.5rem;
