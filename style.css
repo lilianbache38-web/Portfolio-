@@ -293,19 +293,102 @@ body{
   transform: translateY(-3px);
 }
 
-/* Content / cards */
+/* Content / cards - Design original et varié */
 .content{
   padding:3rem 0 4rem;
 }
 
 .card{
   background: var(--card);
-  border-radius: var(--radius);
   padding: 2rem 2.2rem;
   margin: 2rem 0;
   box-shadow: var(--shadow);
   border: 1px solid rgba(99, 102, 241, 0.08);
   transition: all .4s cubic-bezier(.22,.9,.24,1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Formes variées pour chaque carte */
+.card:nth-child(1) {
+  border-radius: 30px 30px 10px 10px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, white 50%);
+}
+
+.card:nth-child(2) {
+  border-radius: 10px 50px 10px 50px;
+  border-left: 5px solid var(--accent);
+  background: white;
+}
+
+.card:nth-child(3) {
+  border-radius: 50px 10px 50px 10px;
+  background: linear-gradient(to right, white 0%, rgba(139, 92, 246, 0.05) 100%);
+  transform: rotate(-0.5deg);
+}
+
+.card:nth-child(4) {
+  border-radius: 20px 20px 60px 20px;
+  border-top: 5px solid linear-gradient(90deg, #6366f1, #8b5cf6);
+  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.08), white);
+}
+
+.card:nth-child(5) {
+  border-radius: 60px 20px 20px 20px;
+  border-right: 5px solid var(--accent);
+  background: linear-gradient(225deg, rgba(139, 92, 246, 0.05) 0%, white 70%);
+  transform: rotate(0.5deg);
+}
+
+.card:nth-child(6) {
+  border-radius: 40px;
+  background: linear-gradient(135deg, white 0%, rgba(99, 102, 241, 0.06) 100%);
+  box-shadow: 
+    0 10px 40px rgba(99, 102, 241, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Effet d'ondulation au survol */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Décorations géométriques */
+.card:nth-child(odd)::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.card:nth-child(even)::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(225deg, rgba(139, 92, 246, 0.05), transparent);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  pointer-events: none;
 }
 
 .fade-in {
@@ -321,8 +404,17 @@ body{
 
 .card:hover {
   box-shadow: var(--shadow-hover);
-  transform: translateY(-6px);
-  border-color: rgba(99, 102, 241, 0.15);
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+/* Variation d'angles au hover pour plus d'originalité */
+.card:nth-child(odd):hover {
+  transform: translateY(-8px) rotate(1deg);
+}
+
+.card:nth-child(even):hover {
+  transform: translateY(-8px) rotate(-1deg);
 }
 
 /* Emoji banner animé */
@@ -423,19 +515,35 @@ body{
   font-weight: 600;
 }
 
-/* About section */
+/* About section avec design asymétrique */
 .about-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 2rem;
   margin-top: 1.5rem;
 }
 
+.about-text {
+  position: relative;
+}
+
 .about-highlight {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
-  padding: 1.5rem;
-  border-radius: 12px;
+  padding: 2rem;
+  border-radius: 30px 10px 30px 10px;
   border-left: 4px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-highlight::before {
+  content: '💡';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.05;
+  bottom: -20px;
+  right: -20px;
+  transform: rotate(-15deg);
 }
 
 /* Skills section */
@@ -503,19 +611,36 @@ body{
 
 .soft-skill-card {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
-  padding: 1rem;
-  border-radius: 10px;
+  padding: 1.2rem;
+  border-radius: 20px;
   text-align: center;
   font-weight: 600;
   color: var(--accent);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.soft-skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.soft-skill-card:hover::before {
+  opacity: 0.15;
 }
 
 .soft-skill-card:hover {
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-10px) scale(1.08) rotate(3deg);
   border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
+  color: var(--title);
 }
 
 /* Projects grid */
@@ -527,14 +652,31 @@ body{
 }
 
 .project-card {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+  background: white;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 25px;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.22, 0.9, 0.24, 1);
-  border: 2px solid transparent;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 2px solid rgba(99, 102, 241, 0.1);
   position: relative;
   overflow: hidden;
+}
+
+/* Chaque carte de projet a une forme unique */
+.project-card:nth-child(1) {
+  border-radius: 40px 10px 40px 10px;
+}
+
+.project-card:nth-child(2) {
+  border-radius: 10px 40px 10px 40px;
+}
+
+.project-card:nth-child(3) {
+  border-radius: 30px 30px 10px 10px;
+}
+
+.project-card:nth-child(4) {
+  border-radius: 10px 10px 30px 30px;
 }
 
 .project-card::before {
@@ -543,10 +685,11 @@ body{
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 5px;
   background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
   transform: scaleX(0);
-  transition: transform 0.4s ease;
+  transform-origin: left;
+  transition: transform 0.5s ease;
 }
 
 .project-card:hover::before {
@@ -554,10 +697,12 @@ body{
 }
 
 .project-card:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-15px) scale(1.03) rotate(2deg);
   border-color: var(--accent);
-  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
-  background: white;
+  box-shadow: 
+    0 25px 70px rgba(99, 102, 241, 0.25),
+    0 10px 30px rgba(139, 92, 246, 0.2);
+  background: linear-gradient(135deg, white 0%, rgba(99, 102, 241, 0.05) 100%);
 }
 
 .project-icon {
@@ -648,11 +793,29 @@ body{
 }
 
 .aspirations-section {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
-  padding: 2rem;
-  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
+  padding: 2.5rem;
+  border-radius: 40px 10px 40px 10px;
   margin-top: 3rem;
-  border-left: 4px solid var(--accent);
+  border: 3px solid transparent;
+  border-image: linear-gradient(135deg, #6366f1, #8b5cf6) 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.aspirations-section::before {
+  content: '🎯';
+  position: absolute;
+  font-size: 12rem;
+  opacity: 0.05;
+  top: -30px;
+  right: -30px;
+  animation: rotate-slow 20s linear infinite;
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* Contact */
@@ -695,9 +858,22 @@ body{
 }
 
 .contact-form {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
-  padding: 2rem;
-  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
+  padding: 2.5rem;
+  border-radius: 30px 10px 30px 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 60%);
+  animation: pulse 4s ease-in-out infinite;
 }
 
 .form-group {
