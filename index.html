@@ -18,126 +18,286 @@
       </div>
       <div class="nav-links">
         <a href="#qui-suis-je">Qui suis-je</a>
-        <a href="#parcours">Parcours</a>
         <a href="#competences">Compétences</a>
-        <a href="#reussites">Réussites</a>
-        <a href="#aspirations">Aspirations</a>
-        <a href="#conclure">Conclusion</a>
+        <a href="#projets">Projets</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container">
-        <h1 id="hero-title">Portfolio Lilian Bache</h1>
-        <p class="lead">Découvre mon parcours, mes compétences et mes projets — un profil orienté événements &amp; IA.</p>
-        <div class="hero-ctas">
-          <a class="btn primary" href="#qui-suis-je">En savoir plus</a>
-          <a class="btn outline" href="#conclure">Contact / CV</a>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 id="hero-title">Portfolio Lilian Bache</h1>
+          <p class="lead">Découvre mon parcours, mes compétences et mes projets — un profil orienté événements &amp; IA.</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#qui-suis-je">En savoir plus</a>
+            <a class="btn outline" href="./assets/Lilian-cv.pdf" download>Télécharger mon CV</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="./assets/lilian-pdp.png" alt="Lilian Bache" class="profile-pic">
         </div>
       </div>
     </section>
 
     <section class="container content">
+      
       <!-- 1. Qui suis-je -->
-      <article class="card" id="qui-suis-je" tabindex="-1" aria-labelledby="qs-title">
-        <h2 id="qs-title">1. Qui suis-je ? (Identité &amp; personnalité)</h2>
+      <article class="card fade-in" id="qui-suis-je" tabindex="-1">
+        <h2>À propos de moi</h2>
+        
+        <div class="about-grid">
+          <div class="about-text">
+            <h3>Présentation</h3>
+            <p>Je suis quelqu'un de curieux et ouvert d'esprit, toujours en quête de nouvelles connaissances. J'aime apprendre, découvrir et relever de nouveaux défis. Ces expériences m'ont permis de développer une solide capacité d'organisation, une bonne gestion logistique et un véritable esprit d'équipe dans des environnements dynamiques et parfois concurrentiels.</p>
+            
+            <h3>Mes valeurs</h3>
+            <p><strong>Curiosité, rigueur et esprit d'équipe.</strong> J'accorde aussi de l'importance à la patience et à la bienveillance dans la collaboration.</p>
+            
+            <h3>Qualités professionnelles</h3>
+            <p><strong>Proactif • Dynamique • Sociable</strong></p>
+          </div>
+          
+          <div class="about-highlight">
+            <h3>💡 Anecdote</h3>
+            <p>En terminale, j'ai co-organisé <strong>La Nuit du Volley</strong>, un tournoi de 19h à 23h avec poules et phases éliminatoires. J'y ai appris la coordination d'équipe, la gestion des imprévus et la satisfaction de mener un projet collectif à son terme.</p>
+          </div>
+        </div>
+      </article>
 
-        <h3>• Comment te présenterais-tu en quelques phrases à quelqu'un qui ne te connaît pas ?</h3>
-        <p>Je suis quelqu'un de curieux et ouvert d'esprit, toujours en quête de nouvelles connaissances. J'aime apprendre, découvrir et relever de nouveaux défis. Ces expériences m'ont permis de développer une solide capacité d'organisation, une bonne gestion logistique et un véritable esprit d'équipe dans des environnements dynamiques et parfois concurrentiels. Je fais preuve de persévérance et d'adaptabilité, deux qualités essentielles pour mener à bien chaque projet.</p>
+      <!-- 3. Compétences avec barres de progression -->
+      <article class="card fade-in" id="competences" tabindex="-1">
+        <h2>Compétences</h2>
+        
+        <div class="skills-section">
+          <h3>Compétences techniques</h3>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Gestion de projet</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="--progress: 90%"></div>
+            </div>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Communication & Négociation</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="--progress: 85%"></div>
+            </div>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Relation client</span>
+              <span>88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="--progress: 88%"></div>
+            </div>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Développement de partenariats</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="--progress: 80%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-section">
+          <h3>Outils & Technologies</h3>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Salesforce</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="--progress: 75%"></div>
+            </div>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Excel & Suite Office</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="--progress: 85%"></div>
+            </div>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Canva & Design</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="--progress: 70%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-section">
+          <h3>Soft Skills</h3>
+          <div class="soft-skills-grid">
+            <div class="soft-skill-card">📋 Organisation</div>
+            <div class="soft-skill-card">💪 Persévérance</div>
+            <div class="soft-skill-card">🔄 Adaptabilité</div>
+            <div class="soft-skill-card">⚡ Efficacité sous pression</div>
+            <div class="soft-skill-card">🎯 Priorisation</div>
+            <div class="soft-skill-card">🤝 Esprit d'équipe</div>
+          </div>
+        </div>
+      </article>
 
-        <h3>• Trois mots (ou qualités) pour ta personnalité dans un contexte professionnel ?</h3>
-        <p><strong>Proactif, dynamique, sociable.</strong></p>
-
-        <h3>• Tes valeurs principales ?</h3>
-        <p>Curiosité, rigueur et esprit d'équipe. J'accorde aussi de l'importance à la patience et à la bienveillance dans la collaboration.</p>
-
-        <h3>• Anecdote</h3>
-        <p>En terminale, j'ai co-organisé *La Nuit du Volley*, un tournoi de 19h à 23h avec poules et phases éliminatoires. J'y ai appris la coordination d'équipe, la gestion des imprévus et la satisfaction de mener un projet collectif à son terme.</p>
+      <!-- 4. Projets avec modales -->
+      <article class="card fade-in" id="projets" tabindex="-1">
+        <h2>Projets & Réalisations</h2>
+        
+        <div class="projects-grid">
+          
+          <div class="project-card" onclick="openModal('modal1')">
+            <div class="project-icon">🏐</div>
+            <h3>La Nuit du Volley</h3>
+            <p>Organisation d'un tournoi inter-lycées avec gestion complète de l'événement</p>
+            <span class="project-tag">Événementiel</span>
+          </div>
+          
+          <div class="project-card" onclick="openModal('modal2')">
+            <div class="project-icon">🏢</div>
+            <h3>Alternance Spotlag</h3>
+            <p>Gestion de 20 projets/semaine en événementiel sportif</p>
+            <span class="project-tag">Gestion de projet</span>
+          </div>
+          
+          <div class="project-card" onclick="openModal('modal3')">
+            <div class="project-icon">🏅</div>
+            <h3>JO Paris 2024</h3>
+            <p>Bénévolat au CDFAS - Construction et logistique</p>
+            <span class="project-tag">Logistique</span>
+          </div>
+          
+          <div class="project-card" onclick="openModal('modal4')">
+            <div class="project-icon">🏃</div>
+            <h3>Semi-Marathon de Paris</h3>
+            <p>Défi personnel illustrant engagement et discipline</p>
+            <span class="project-tag">Défi personnel</span>
+          </div>
+          
+        </div>
       </article>
 
       <!-- 2. Parcours -->
-      <article class="card" id="parcours" tabindex="-1" aria-labelledby="parcours-title">
-        <h2 id="parcours-title">2. Parcours (académique &amp; extrascolaire)</h2>
-
-        <h3>• Diplômes</h3>
-        <p>Baccalauréat, puis licence en <em>Commercialisation des Produits et Services Sportifs</em> à l'ILEPS.</p>
-
-        <h3>• Matière / Projet marquant</h3>
-        <p>Les cours d'histoire et d'économie : ils m'ont aidé à comprendre les enjeux sociaux et économiques qui structurent les organisations.</p>
-
-        <h3>• Projets associatifs &amp; bénévolat</h3>
-        <p>Aux JO 2024 de Paris, j'étais bénévole au CDFAS (Athletica) à Ermont. J'ai participé à la construction des installations, à la préparation des équipements et au ravitaillement — une expérience logistique et humaine forte, dans un contexte international.</p>
-
-        <h3>• Expériences professionnelles</h3>
-        <p>1 mois en restauration en Écosse (amélioration de l'anglais), 2 mois chez Décathlon (service client), puis alternance chez Spotlag (événementiel) : gestion de projet, relation client et coordination d'équipes.</p>
+      <article class="card fade-in" id="parcours" tabindex="-1">
+        <h2>Parcours</h2>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Alternance - Spotlag</h3>
+              <p class="timeline-date">2023 - Présent</p>
+              <p>Gestion de projet événementiel, prospection, relation client et coordination d'équipes. Gestion de jusqu'à 20 projets par semaine.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Bénévolat JO Paris 2024</h3>
+              <p class="timeline-date">2024</p>
+              <p>CDFAS (Athletica) à Ermont - Construction des installations, préparation des équipements et ravitaillement.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Licence CPSS - ILEPS</h3>
+              <p class="timeline-date">2021 - 2024</p>
+              <p>Commercialisation des Produits et Services Sportifs. Focus sur l'histoire, l'économie et la gestion de projet.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Décathlon</h3>
+              <p class="timeline-date">2 mois</p>
+              <p>Service client - Développement de compétences en relation client et conseil.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Expérience en Écosse</h3>
+              <p class="timeline-date">1 mois</p>
+              <p>Restauration - Amélioration de l'anglais et ouverture culturelle.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="aspirations-section">
+          <h3>🎯 Mes aspirations</h3>
+          <p><strong>Poste visé :</strong> Un poste lié à l'intelligence artificielle, idéalement au croisement produit & donnée.</p>
+          <p><strong>Secteur :</strong> L'IA - un secteur en pleine expansion, riche en opportunités d'innovation et d'impact.</p>
+          <p><strong>Compétences à développer :</strong> Machine learning, data science et gestion de produits technologiques.</p>
+          <p><strong>Vision :</strong> Un rôle flexible qui permet de voyager, d'avoir un impact réel et d'évoluer dans un environnement stimulant.</p>
+        </div>
       </article>
 
-      <!-- 3. Compétences -->
-      <article class="card" id="competences" tabindex="-1" aria-labelledby="comp-title">
-        <h2 id="comp-title">3. Compétences</h2>
-
-        <h3>• Compétences techniques</h3>
-        <p>Gestion de projet, prospection, communication, négociation, développement de partenariats.</p>
-
-        <h3>• Soft skills</h3>
-        <p>Organisation (gestion de jusqu'à 20 projets/semaine en alternance), persévérance et adaptabilité. Je sais prioriser et rester efficace sous pression.</p>
-
-        <h3>• Outils</h3>
-        <p>Salesforce, Excel, Word, Canva et les principaux réseaux sociaux.</p>
-
-        <h3>• À mettre en avant</h3>
-        <p>Mon expérience en gestion de projet et ma capacité à entretenir des relations clients solides dans un environnement exigeant.</p>
-      </article>
-
-      <!-- 4. Réussites -->
-      <article class="card" id="reussites" tabindex="-1" aria-labelledby="reuss-title">
-        <h2 id="reuss-title">4. Réussites et fiertés</h2>
-
-        <h3>• Réalisations</h3>
-        <p>Terminer le semi-marathon de Paris ; actuellement en préparation pour le marathon de Paris. Ces défis illustrent mon engagement et ma discipline.</p>
-
-        <h3>• Défis personnels</h3>
-        <p>Changer d'établissement au collège et repartir à zéro : une leçon d'adaptabilité et de résilience.</p>
-
-        <h3>• Projets à montrer</h3>
-        <p>La Nuit du Volley et plusieurs missions réalisées chez Spotlag. Je prévois d'ajouter bientôt photos et documents pour illustrer ces projets.</p>
-
-        <h3>• Prochain challenge</h3>
-        <p>Le marathon de Paris (avril).</p>
-      </article>
-
-      <!-- 5. Aspirations -->
-      <article class="card" id="aspirations" tabindex="-1" aria-labelledby="aspir-title">
-        <h2 id="aspir-title">5. Aspirations</h2>
-
-        <h3>• Poste visé</h3>
-        <p>Un poste lié à l'intelligence artificielle, idéalement au croisement produit &amp; donnée.</p>
-
-        <h3>• Univers professionnel</h3>
-        <p>L'IA : un secteur en pleine expansion, riche en opportunités d'innovation et d'impact.</p>
-
-        <h3>• Compétences à développer</h3>
-        <p>Machine learning, data science et gestion de produits technologiques.</p>
-
-        <h3>• Job de rêve</h3>
-        <p>Un rôle flexible qui permet de voyager, d'avoir un impact réel et d'évoluer dans un environnement stimulant.</p>
-      </article>
-
-      <!-- 7. Conclure -->
-      <article class="card" id="conclure" tabindex="-1" aria-labelledby="concl-title">
-        <h2 id="concl-title">7. Conclusion</h2>
-
-        <h3>• Ce que je veux que l'on retienne</h3>
-        <p>Que je suis un profil atypique, adaptable et motivé, capable d'apporter de la valeur ajoutée à une équipe.</p>
-
-        <h3>• Premier sujet d'échange souhaité</h3>
-        <p>Je souhaite d'abord échanger sur mes expériences en gestion de projet et mon alternance, ainsi que sur mes aspirations en IA.</p>
-
-        <div class="card-actions">
-        <a class="btn primary" href="./assets/Lilian-cv.pdf" download="Lilian-cv.pdf">Télécharger mon CV (PDF)</a>
-          <a class="btn outline" href="mailto:ton.email@example.com">Me contacter</a>
+      <!-- Contact -->
+      <article class="card fade-in" id="contact" tabindex="-1">
+        <h2>Contact</h2>
+        
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Restons en contact</h3>
+            <p>Que je suis un profil atypique, adaptable et motivé, capable d'apporter de la valeur ajoutée à une équipe.</p>
+            <p>Je souhaite échanger sur mes expériences en gestion de projet, mon alternance et mes aspirations en IA.</p>
+            
+            <div class="contact-methods">
+              <a href="mailto:ton.email@example.com" class="contact-link">
+                <span>📧</span> Email
+              </a>
+              <a href="./assets/Lilian-cv.pdf" download class="contact-link">
+                <span>📄</span> Télécharger CV
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Votre nom</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn primary">Envoyer</button>
+            </form>
+          </div>
         </div>
       </article>
 
@@ -153,17 +313,102 @@
 
   </main>
 
-  <script>
-    // apparition progressive + highlight nav
-    const cards = document.querySelectorAll('.card');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    }, { threshold: 0.12 });
-    cards.forEach(c => observer.observe(c));
+  <!-- Modales pour les projets -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>🏐 La Nuit du Volley</h2>
+      <p><strong>Contexte :</strong> Événement organisé en terminale</p>
+      <p><strong>Durée :</strong> 19h - 23h</p>
+      <p><strong>Format :</strong> Tournoi avec poules et phases éliminatoires</p>
+      <p><strong>Compétences développées :</strong></p>
+      <ul>
+        <li>Coordination d'équipe</li>
+        <li>Gestion des imprévus en temps réel</li>
+        <li>Planification logistique</li>
+        <li>Animation d'événement sportif</li>
+      </ul>
+      <p><strong>Résultat :</strong> Événement réussi avec grande satisfaction des participants et apprentissage précieux en gestion de projet.</p>
+    </div>
+  </div>
 
-    // nav active link
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>🏢 Alternance chez Spotlag</h2>
+      <p><strong>Poste :</strong> Chargé de projet événementiel</p>
+      <p><strong>Missions :</strong></p>
+      <ul>
+        <li>Gestion simultanée de jusqu'à 20 projets par semaine</li>
+        <li>Prospection et développement de partenariats</li>
+        <li>Relation client et suivi personnalisé</li>
+        <li>Coordination d'équipes sur des événements sportifs</li>
+        <li>Utilisation de Salesforce pour le CRM</li>
+      </ul>
+      <p><strong>Compétences clés :</strong> Organisation, priorisation, efficacité sous pression, communication professionnelle</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>🏅 JO Paris 2024 - Bénévolat</h2>
+      <p><strong>Lieu :</strong> CDFAS (Athletica) à Ermont</p>
+      <p><strong>Missions :</strong></p>
+      <ul>
+        <li>Construction et montage des installations olympiques</li>
+        <li>Préparation et vérification des équipements</li>
+        <li>Ravitaillement des athlètes et équipes</li>
+        <li>Support logistique dans un contexte international</li>
+      </ul>
+      <p><strong>Impact :</strong> Expérience humaine et logistique forte, travail en équipe multiculturelle, contribution à un événement mondial majeur.</p>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h2>🏃 Semi-Marathon de Paris</h2>
+      <p><strong>Défi :</strong> Course de 21 km dans les rues de Paris</p>
+      <p><strong>Préparation :</strong> Entraînement rigoureux sur plusieurs mois</p>
+      <p><strong>Résultat :</strong> Objectif atteint avec succès</p>
+      <p><strong>Prochain challenge :</strong> Marathon de Paris (42 km) en avril 2025</p>
+      <p><strong>Ce que cela illustre :</strong></p>
+      <ul>
+        <li>Engagement personnel et discipline</li>
+        <li>Capacité à se fixer des objectifs ambitieux</li>
+        <li>Persévérance et dépassement de soi</li>
+        <li>Gestion de la préparation sur le long terme</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Animations au scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          
+          // Animation des barres de progression
+          if (entry.target.querySelector('.skill-progress')) {
+            const progressBars = entry.target.querySelectorAll('.skill-progress');
+            progressBars.forEach(bar => {
+              bar.style.animation = 'progressAnimation 1.5s ease-out forwards';
+            });
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Navigation active
     const sections = document.querySelectorAll('article.card');
     const navLinks = document.querySelectorAll('.nav-links a');
     const navObserver = new IntersectionObserver((entries) => {
@@ -176,14 +421,38 @@
     }, { threshold: 0.35 });
     sections.forEach(s => navObserver.observe(s));
 
-    // back to top
+    // Back to top
     const backBtn = document.querySelector('.back-to-top');
     backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     window.addEventListener('scroll', () => {
       backBtn.style.display = (window.scrollY > 300) ? 'flex' : 'none';
     });
-    // init state
     backBtn.style.display = 'none';
+
+    // Modales
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Formulaire de contact
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Merci pour votre message ! (Cette fonction nécessite un backend pour fonctionner réellement)');
+      this.reset();
+    });
   </script>
 </body>
 </html>
