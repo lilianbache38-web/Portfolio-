@@ -27,6 +27,9 @@
     </nav>
   </header>
 
+  <!-- Barre de progression de lecture -->
+  <div class="reading-progress"></div>
+
   <main>
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-content">
@@ -84,6 +87,41 @@
             <p>Le soir J, 19h tout est prêt, le tournoi peut commencer. Les matchs s'enchaînent, le temps passe à grande vitesse.</p>
             
             <p>Puis il est déjà 23h, tournoi terminé, tout le monde est ravi. Cette nuit-là, j'ai réalisé que j'adorais gérer des projets.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section En Chiffres -->
+      <article class="card fade-in stats-section" id="chiffres" tabindex="-1">
+        <h2>📊 En chiffres</h2>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" data-target="20">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">Projets/semaine</div>
+            <div class="stat-icon">🎯</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-number" data-target="21">0</div>
+            <div class="stat-plus">km</div>
+            <div class="stat-label">Semi-marathon</div>
+            <div class="stat-icon">🏃</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-plus"></div>
+            <div class="stat-label">Pays d'expérience</div>
+            <div class="stat-icon">🌍</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-number" data-target="1">0</div>
+            <div class="stat-plus"></div>
+            <div class="stat-label">JO 2024 Paris</div>
+            <div class="stat-icon">🏅</div>
           </div>
         </div>
       </article>
@@ -706,6 +744,60 @@
       } else {
         darkModeToggle.textContent = '🌙';
         localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+
+    // Barre de progression de lecture
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.querySelector('.reading-progress').style.width = scrolled + '%';
+    });
+
+    // Compteurs animés pour la section "En chiffres"
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statCards = entry.target.querySelectorAll('.stat-card');
+          statCards.forEach(card => {
+            const numberElement = card.querySelector('.stat-number');
+            const target = parseInt(numberElement.getAttribute('data-target'));
+            animateCounter(numberElement, 0, target, 2000);
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+      statsObserver.observe(statsSection);
+    }
+
+    function animateCounter(element, start, end, duration) {
+      let startTime = null;
+      
+      function animation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.textContent = value;
+        
+        if (progress < 1) {
+          requestAnimationFrame(animation);
+        }
+      }
+      
+      requestAnimationFrame(animation);
+    }
+
+    // Effet parallax sur le hero
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const profilePic = document.querySelector('.profile-pic');
+      if (profilePic) {
+        profilePic.style.transform = `translateY(${scrolled * 0.3}px)`;
       }
     });
   </script>
