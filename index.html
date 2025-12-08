@@ -53,32 +53,16 @@
       <article class="card fade-in" id="qui-suis-je" tabindex="-1">
         <h2>À propos de moi</h2>
         
-        <div class="about-grid">
-          <div class="about-text">
-            <h3>Présentation</h3>
-            <p>Hello ! Moi c'est Lilian.</p>
-            
-            <p>Mon parcours ? Un mélange atypique entre gestion d'événements : séminaires, soirées d'entreprise, journées d'étude et team building en BtoB, et une fascination grandissante pour l'Intelligence Artificielle.</p>
-            
-            <p>Pendant mon alternance chez Spotlag, j'ai appris à jongler avec 20 projets par semaine, à gérer l'imprévu en temps réel, et à transformer chaque défi en opportunité. Que ce soit pour organiser La Nuit du Volley en terminale, contribuer aux JO 2024 à Paris, ou courir un semi-marathon, j'ai toujours adoré me fixer des objectifs ambitieux et les dépasser.</p>
-            
-            <p>Aujourd'hui, je suis en pleine transition vers l'univers de l'IA et de la data. Pourquoi ? Parce que j'ai réalisé que la tech peut démultiplier l'impact qu'on peut avoir. Et participer à cette révolution technologique, ça me fait vibrer.</p>
-            
-            <h3>Mes valeurs</h3>
-            <p><strong>🎯 Curiosité insatiable</strong><br>
-            Je ne me contente jamais du "comment", je veux toujours comprendre le "pourquoi". C'est cette soif d'apprendre qui me pousse à explorer de nouveaux domaines comme l'IA.</p>
-            
-            <p><strong>⚡ Rigueur sous pression</strong><br>
-            Dans l'événementiel, il n'y a pas de droit à l'erreur. J'ai appris à rester organisé et efficace même quand tout s'accélère.</p>
-            
-            <p><strong>🤝 Collaboration</strong><br>
-            Les meilleurs projets naissent du travail d'équipe. J'apporte autant d'énergie à aider mes collègues qu'à atteindre mes propres objectifs.</p>
-            
-            <p><strong>💪 Persévérance</strong><br>
-            Que ce soit gérer 20 projets simultanés ou préparer un marathon, j'ai cette capacité à tenir sur la durée et à transformer l'obstacle en tremplin.</p>
-          </div>
+        <div class="about-content">
+          <p>Hello ! Moi c'est Lilian.</p>
           
-          <div class="about-highlight">
+          <p>Mon parcours ? Un mélange atypique entre gestion d'événements : séminaires, soirées d'entreprise, journées d'étude et team building en BtoB, et une fascination grandissante pour l'Intelligence Artificielle.</p>
+          
+          <p>Pendant mon alternance chez Spotlag, j'ai appris à jongler avec 20 projets par semaine, à gérer l'imprévu en temps réel, et à transformer chaque défi en opportunité. Que ce soit pour organiser La Nuit du Volley en terminale, contribuer aux JO 2024 à Paris, ou courir un semi-marathon, j'ai toujours adoré me fixer des objectifs ambitieux et les dépasser.</p>
+          
+          <p>Aujourd'hui, je suis en pleine transition vers l'univers de l'IA et de la data. Pourquoi ? Parce que j'ai réalisé que la tech peut démultiplier l'impact qu'on peut avoir. Et participer à cette révolution technologique, ça me fait vibrer.</p>
+          
+          <div class="anecdote-box">
             <h3>🏐 Volley Nocturne</h3>
             <p>Terminale, 18 ans. En option sport nous avons comme évaluation de créer un projet événementiel dans le lycée. Avec des potes, on se dit : "Et si on organisait un tournoi de volley nocturne dans notre lycée ?"</p>
             
@@ -87,6 +71,37 @@
             <p>Le soir J, 19h tout est prêt, le tournoi peut commencer. Les matchs s'enchaînent, le temps passe à grande vitesse.</p>
             
             <p>Puis il est déjà 23h, tournoi terminé, tout le monde est ravi. Cette nuit-là, j'ai réalisé que j'adorais gérer des projets.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mes valeurs -->
+      <article class="card fade-in values-card" id="valeurs" tabindex="-1">
+        <h2>💎 Mes valeurs</h2>
+        
+        <div class="values-grid">
+          <div class="value-card" data-delay="0">
+            <div class="value-icon">🎯</div>
+            <h3>Curiosité insatiable</h3>
+            <p class="typewriter-text" data-text="Je ne me contente jamais du 'comment', je veux toujours comprendre le 'pourquoi'. C'est cette soif d'apprendre qui me pousse à explorer de nouveaux domaines comme l'IA."></p>
+          </div>
+          
+          <div class="value-card" data-delay="200">
+            <div class="value-icon">⚡</div>
+            <h3>Rigueur sous pression</h3>
+            <p class="typewriter-text" data-text="Dans l'événementiel, il n'y a pas de droit à l'erreur. J'ai appris à rester organisé et efficace même quand tout s'accélère."></p>
+          </div>
+          
+          <div class="value-card" data-delay="400">
+            <div class="value-icon">🤝</div>
+            <h3>Collaboration</h3>
+            <p class="typewriter-text" data-text="Les meilleurs projets naissent du travail d'équipe. J'apporte autant d'énergie à aider mes collègues qu'à atteindre mes propres objectifs."></p>
+          </div>
+          
+          <div class="value-card" data-delay="600">
+            <div class="value-icon">💪</div>
+            <h3>Persévérance</h3>
+            <p class="typewriter-text" data-text="Que ce soit gérer 20 projets simultanés ou préparer un marathon, j'ai cette capacité à tenir sur la durée et à transformer l'obstacle en tremplin."></p>
           </div>
         </div>
       </article>
@@ -800,6 +815,38 @@
         profilePic.style.transform = `translateY(${scrolled * 0.3}px)`;
       }
     });
+
+    // Effet typewriter pour les valeurs
+    const typewriterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const texts = entry.target.querySelectorAll('.typewriter-text');
+          texts.forEach(textElement => {
+            const fullText = textElement.getAttribute('data-text');
+            const card = textElement.closest('.value-card');
+            const delay = parseInt(card.getAttribute('data-delay')) || 0;
+            
+            setTimeout(() => {
+              typeWriter(textElement, fullText, 0, 20);
+            }, delay);
+          });
+          typewriterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const valuesCard = document.querySelector('.values-card');
+    if (valuesCard) {
+      typewriterObserver.observe(valuesCard);
+    }
+
+    function typeWriter(element, text, index, speed) {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(() => typeWriter(element, text, index, speed), speed);
+      }
+    }
   </script>
 </body>
 </html>
